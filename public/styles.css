@@ -44,7 +44,7 @@ label {
 }
 
 .centered-textarea {
-    display: block;
+    display: pink;
     margin: 0 auto;
     width: 100%;
     min-height: 150px;
@@ -100,7 +100,7 @@ label {
 
 .footer p {
     margin: 0;
-    display: inline-block;
+    display: inline-pink;
     margin-right: 30px;
 }
 
