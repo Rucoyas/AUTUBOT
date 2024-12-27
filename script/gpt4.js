@@ -1,11 +1,11 @@
 const axios = require('axios');
 
 module.exports.config = {
-  name: 'gpt4',
+  name: 'fairy',
   version: '1.0.0',
   role: 0,
   hasPrefix: false,
-  aliases: ['gpt', 'openai'],
+  aliases: ['FAIRY', 'openai'],
   description: "An AI command powered by GPT-4",
   usage: "gpt4 [prompt]",
   credits: 'Developer',
@@ -17,7 +17,7 @@ module.exports.run = async function({ api, event, args }) {
 
   if (!input) {
     api.sendMessage(
-      "[ GPT-4 ]\n\nPlease provide a query after 'gpt4'. Example: 'gpt4 What is AI?'",
+      "[ FAIRY-V2 ]\n\nPlease provide a query after 'gpt4'. Example: 'gpt4 What is AI?'",
       event.threadID,
       event.messageID
     );
@@ -25,7 +25,7 @@ module.exports.run = async function({ api, event, args }) {
   }
 
   api.sendMessage(
-    "[ GPT-4 ]\n\nPlease wait...",
+    "[ FAIRY-V2 ]\n\nPlease Answering...",
     event.threadID,
     (err, info) => {
       if (err) return;
@@ -42,7 +42,7 @@ module.exports.run = async function({ api, event, args }) {
         })
         .catch(() => {
           api.editMessage(
-            "[ GPT-4 ]\n\nAn error occurred while processing your request.",
+            "[ FAIRY-V2 ]\n\nAn error occurred while processing your request.",
             info.messageID
           );
         });
