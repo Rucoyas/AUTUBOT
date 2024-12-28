@@ -27,7 +27,7 @@ module.exports.run = async function({
             let page = 1;
             let start = (page - 1) * pages;
             let end = start + pages;
-            let helpMessage = `🧚‍♂️🧚‍♂️\n\n====『 𝗬𝗛𝗔𝗡𝗔 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧: 』====\n\n`;
+            let helpMessage = `\n\n====『 𝗖𝗛𝗘𝗦𝗖𝗔 𝗔𝗜 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: 』====\n\n`;
             for (let i = start; i < Math.min(end, commands.length); i++) {
                 helpMessage += `  ╭─╮\n  | 『 ${i + 1}.』  ${prefix}${commands[i]}\n  ╰─────────────ꔪ\n`;
             }
